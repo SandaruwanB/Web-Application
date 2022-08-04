@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translateX(-50%,-50%);
+    text-align: center;
+}
+.text h1{
+    font-size: 120px;
+    letter-spacing: 1px;
+}
+.text p{
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 10px 0px 100px;
+}
+.signin-btn, .signup-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 22px;
+    background: transparent;
+    position: relative;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+.signin-btn:hover, .signup-btn:hover{
+    border: 1px solid #f00;
+    background: #f00;
+    color: #fff;
+}
+.signin-btn:active, .signup-btn:active{
+    opacity: 0.7;
+}
+.details{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.details h1{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.details p{
+    color: #777;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 31%;
+    background: #fff3d3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.payment{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background: #777;
+}
+.row-2{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.col-2{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+@media(max-width: 752px){
+    .text h1{
+        font-size: 60px;
+    }
+}
+

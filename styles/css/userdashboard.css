@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=The+Nautigal:wght@700&family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900& display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    background: #fff;
+    min-height: 85vh;
+    width: 80%;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    backdrop-filter: blur(100rem);
+}
+.glass .nav{
+    height: 85vh;
+    width: 300px;
+    background: white;
+    background: linear-gradient(to left top, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    border-radius: 2rem;
+    position: fixed;
+    border-left: 10px solid transparent;
+    transition: 0.5s;
+}
+.nav ul{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+}
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition: 0.5;
+}
+.nav ul li a{
+    text-decoration: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #333;
+}
+.nav ul li:hover a{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.nav ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+.nav ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0px 15px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+.glass .nav .user{
+    margin-top: 20px;
+    text-align: center;
+    color: #65dff6;
+    font-weight: bold;
+}
+.logoutbtn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.logoutbtn a:hover{
+    color: red;
+}.main{
+    height: 85vh;
+    width: calc(100% - 300px);
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+}
+.main .userwelcome{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.clock #time{
+    margin-top: 20px;
+    position: relative;
+    width: 96%;
+    display: grid;
+    padding: 50px;
+    grid-gap: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+    grid-template-columns: repeat(4,1fr);
+}
+.clock #time .abs {
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 3px;
+}
+.main .grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    width: 90%;
+    text-align: center;
+    grid-gap: 30px;
+}
+.main .grid .grid1{
+    background: rgba(255,255,255,0.7);
+    padding: 30px;
+    border-radius: 10px;
+}
+.main .grid .grid1 span{
+    font-size: 20px;
+    color: #333;
+}
+.main .grid .grid1 .value{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: darkblue;
+    font-weight: bold;
+}
+@media screen and (max-width: 1150px){
+    .glass .nav{
+        width: 65px;
+    }
+    .main{
+        width: calc(100% - 65px);
+    }
+    .nav ul li a .title{
+        display: none;
+    }
+    .user h3 .text{
+        display: none;
+    }
+    .main .userwelcome{
+        font-size: 15px;
+    }
+    .main .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

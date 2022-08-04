@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+    padding: 10px;
+}
+.container1{
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    display: block;
+}
+.container1 .data{
+    display: flex;
+    flex-direction: column;
+}
+.container1 .data form input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.container1 .data form button{
+    margin-left: 45%;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container1 .data form button:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.container1 .data .main{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container1 .data form span{
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+.container1 .data form input,.container1 .data form textarea{
+    height: 30px;
+    width: 100%;
+    padding-left: 20px;
+}
+.container1 .data form textarea{
+    height: 100px;
+    padding-top: 8px;
+}
+.container1 .data form input:focus,.container1 .data form textarea:focus{
+    outline: none;
+}
+.container1 .data .main2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.container1 .data .contact-details span{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25%;
+}
+.container1 .data .contact-details .dat{
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 23%;
+}

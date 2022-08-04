@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.container .title{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+}
+.container form .user-details{
+    display: block;
+    margin-top: 30px;
+}
+form .user-details .input-box{
+    width: calc(100% 2 - 20px);
+    margin-top: 30px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+.user-details .input-box input:focus{
+    outline: none;
+    border-bottom-width: 2px;
+}
+select{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+select:focus{
+    outline: none;
+}
+.user-details .input-box span{
+    margin-left: 6px;
+}
+.user-details .button{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+.user-details .button input{
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 10px;
+} 
+.user-details .button input:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.user-details .button input:active{
+    opacity: 0.6;
+}
+.container a {
+    position: absolute;
+    right: 38px;
+    top: 22px;
+    font-size: 2rem;
+    color: red;
+}
+.container .details{
+    margin-top: 30px;
+}
+.container .details .inside{
+    margin-left: 10%;
+}
+.container .details .name{
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #9b59b6;
+}
+.container .details .inside .data{
+    margin-left: 2%;
+}

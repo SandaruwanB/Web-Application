@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=The+Nautigal:wght@700&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    background: #fff;
+    min-height: 85vh;
+    width: 80%;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    backdrop-filter: blur(100rem);
+}
+.glass .nav{
+    height: 85vh;
+    width: 300px;
+    background: white;
+    background: linear-gradient(to left top, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    border-radius: 2rem;
+    position: fixed;
+    border-left: 10px solid transparent;
+    transition: 0.5s;
+}
+.nav ul{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+}
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition: 0.5;
+}
+.nav ul li a{
+    text-decoration: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #333;
+}
+.nav ul li:hover a{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.nav ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+.nav ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0px 15px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+.glass .nav .user{
+    margin-top: 20px;
+    text-align: center;
+    color: #65dff6;
+    font-weight: bold;
+}
+.logoutbtn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.logoutbtn a:hover{
+    color: red;
+}
+.main{
+    height: 85vh;
+    width: calc(100% - 300px);
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+}
+.main .column{
+    width: 94%;
+    height: 70vh;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 6%;
+    background: rgba(255,255,255,0.4);
+    transition: 0.5s;
+}
+.main .column .settings{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+    margin-left: 20%;
+}
+.main .column .settings .details:nth-child(1){
+    margin-top: 10%;
+}
+.main .column .settings .details .name{
+    font-weight: bold;
+    color: darkblue;
+    font-size: 20px;
+    display: block;
+}
+.main .column .settings .details .data{
+    margin-left: 5%;
+}
+.btn-logout, .btn-password{
+    margin-left: 20%;
+}
+.btn-password{
+    margin-top: 30px;
+}
+.btn-password button, .btn-logout a button{
+    display: inline-block;
+    margin-top: 10px;
+    background: transparent;
+    padding: 5px;
+    transition: 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-password button{
+    border: 2px solid darkblue;
+    color: darkblue;
+}
+.btn-logout a button{
+    border: 2px solid #f00;
+    color: #f00;
+}
+.btn-logout a button:hover{
+   background: #f00;
+   color: #fff; 
+}
+.btn-password button:hover{
+    background: darkblue;
+    color: #fff;
+}
+.bg-modal{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.bg-modal .content{
+    width: 400px;
+    height: 350px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+}
+.bg-modal .content .close-btn{
+    text-decoration: none;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-size: 40px;
+    transform: rotate(45deg);
+    color: red;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.bg-modal .content .close-btn:hover{
+    font-weight: bold;
+}
+.bg-modal .content .background h3{
+    margin-top: 20px;
+    text-align: center;
+}
+.all{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+    margin-left: 10%;
+}
+.all form .input span{
+    display: block;
+    margin-top: 20px;
+}
+.all form .input input{
+    margin-left: 20px;
+    width: 280px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+}
+.all form .input input:focus{
+    outline: none;
+}
+.all form .submit-btn button{
+    margin-top: 50px;
+    margin-left: 38%;
+    border: 2px solid gray;
+    background: transparent;
+    transition: 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 4px 20px;
+} 
+.all form .submit-btn button:hover{
+    background: gray;
+    color: #fff;
+}
+.alart{
+    text-align: center;
+    margin-top: 5%;
+}
+.alart .danger{
+    color: red;
+}
+.alart .success{
+    color: green;
+}

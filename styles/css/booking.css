@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    min-height: 100vh;
+    background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .mid{
+    background: #fff;
+    min-height: 85vh;
+    width: 50%;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    backdrop-filter: blur(100rem);
+}
+.main .mid h3{
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gray;
+}
+.mid form{
+    position: relative;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.mid form .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.mid form .details .input span{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+    letter-spacing: 1px;
+}
+.mid form .details .input input,.mid form .details .input select{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 95%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: darkblue;
+    transition: 0.5s;
+}
+.mid form .details .input input:focus,.mid form .details .input select:focus{
+    outline: none;
+}
+.mid form .details .btn{
+    margin-top: 50px;
+}
+.mid form .details .btn a button{
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 0 2px #333;
+    cursor: pointer;
+}
+.mid form .details .btn a .one{
+    background: green;
+}
+.mid form .details .btn a .two{
+    background: darkblue;
+}
+.mid .cancel .three{
+    background: red;
+}
+.mid form .details .btn a .one:hover,.mid form .details .btn a .two:hover{
+    box-shadow: 0 0 6px #333;
+    font-size: 16px;
+}
+.main .mid .cancel{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 30px;
+    text-decoration: none;
+}
+@media screen and (max-width:700px) {
+    .main .mid{
+        width: 90%;
+    }
+}

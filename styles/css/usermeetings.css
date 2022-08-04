@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=The+Nautigal:wght@700&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    background: #fff;
+    min-height: 85vh;
+    width: 80%;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    backdrop-filter: blur(100rem);
+}
+.glass .nav{
+    height: 85vh;
+    width: 300px;
+    background: white;
+    background: linear-gradient(to left top, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    border-radius: 2rem;
+    position: fixed;
+    border-left: 10px solid transparent;
+    transition: 0.5s;
+}
+.nav ul{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+}
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition: 0.5;
+}
+.nav ul li a{
+    text-decoration: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #333;
+}
+.nav ul li:hover a{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.nav ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+.nav ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0px 15px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+.glass .nav .user{
+    margin-top: 20px;
+    text-align: center;
+    color: #65dff6;
+    font-weight: bold;
+}
+.logoutbtn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.logoutbtn a:hover{
+    color: red;
+}.main{
+    height: 85vh;
+    width: calc(100% - 300px);
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+}
+.main .userwelcome{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 1150px){
+    .glass .nav{
+        width: 65px;
+    }
+    .main{
+        width: calc(100% - 65px);
+    }
+    .nav ul li a .title{
+        display: none;
+    }
+    .user h3 .text{
+        display: none;
+    }
+}
+.main .body{
+    position: absolute;
+    top: 7%;
+    width: 100%;
+}
+.main .body .btn{
+    position: relative;
+    margin: 8px 25px;
+    display: block;
+}
+.main .body .btn a button{
+    background: transparent;
+    border: 3px solid #fff;
+    padding: 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.main .body .btn a button:hover{
+    background: #fff;
+    color: #65dfc9;
+}
+.main .body .btn a button:active{
+    opacity: 0.6;
+}
+.main .body .bookings{
+    position: relative;
+    width: 92%;
+    height: 70vh;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.3);
+}
+.main .body .bookings .header h3{
+    color: #333;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+}
+.main .table table{
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 70px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.main .table table td,.main .table table th{
+    padding: 12px 15px;
+    border: 0.5px solid transparent;
+    text-align: center;
+    font-size: 16px;
+}
+.main .table table th{
+    background-color: darkblue;
+    color: #fff;
+    font-weight: bold;
+}
+.main .table table tbody tr:nth-child(even){
+    background-color: rgba(255,255,255,0.7);
+}
+@media (max-width: 1000px){
+    .main .table table thead{
+        display: none;
+    } 
+    .table table,.table table tbody,.table table tr, .table table td{
+        display: block;
+        width: 100%;
+    }
+    .main .table table tr{
+        margin-bottom: 20px;
+    }
+    .main .table table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .main .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+.not-paid{
+    background: red;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px;
+}
+.paid{
+    background: green;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px;
+}
+.delete-btn{
+    border: none;
+    background: red;
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.pay-btn, .parking{
+    border: none;
+    background: green;
+    padding: 5px 10px;
+    margin-left: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.delete-btn:hover,.pay-btn:hover{
+    box-shadow: 0 0 8px #333;
+}
+.parking{
+    background: gray;
+}
+.parking:hover{
+    box-shadow: 0 0 8px gray;
+}
